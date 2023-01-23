@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:moviesns/model/model_movie.dart';
+import 'package:moviesns/widget/my_profile.dart';
 import 'package:moviesns/widget/review_item.dart';
 
 class DetailScreen extends StatefulWidget {
@@ -66,6 +67,18 @@ class _DetailScreenState extends State<DetailScreen> {
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
+                                  ),
+                                ),
+                                Container(
+                                  color: Colors.black,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: <Widget>[
+                                      ReviewItem(),
+                                      ReviewItem(),
+                                      ReviewItem(),
+                                      ReviewItem(),
+                                    ],
                                   ),
                                 ),
                               ],
