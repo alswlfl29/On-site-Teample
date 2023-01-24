@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moviesns/screen/feed_show.dart';
 import 'package:moviesns/widget/my_profile.dart';
 
 class ReviewItem extends StatelessWidget {
@@ -7,7 +8,12 @@ class ReviewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const FeedShow()),
+        );
+      },
       child: Container(
         padding: const EdgeInsets.all(10),
         child: Row(
