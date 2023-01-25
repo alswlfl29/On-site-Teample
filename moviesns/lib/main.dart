@@ -1,65 +1,53 @@
 import 'package:flutter/material.dart';
+import 'package:moviesns/screen/home_screen.dart';
+import 'package:moviesns/widget/bottom_bar.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  MyAppState createState() => MyAppState();
+}
 
+class MyAppState extends State<MyApp> {
+  late TabController controller;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'MoiveReview',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        brightness: Brightness.dark,
+        primaryColor: Colors.black,
+        accentColor: Colors.white,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+      home: DefaultTabController(
+        length: 5,
+        child: Scaffold(
+          body: TabBarView(
+            physics: NeverScrollableScrollPhysics(),
+            children: <Widget>[
+              HomeScreen(),
+              Container(
+                child: Center(
+                  child: Text('검색'),
+                ),
+              ),
+              Container(
+                child: Center(
+                  child: Text('저장한콘텐츠'),
+                ),
+              ),
+              Container(
+                child: Center(
+                  child: Text('더보기'),
+                ),
+              ),
+            ],
+          ),
+          bottomNavigationBar: Bottom(),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
