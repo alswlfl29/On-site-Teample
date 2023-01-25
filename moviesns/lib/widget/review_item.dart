@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moviesns/screen/feed_show.dart';
+import 'package:moviesns/screen/feed_write.dart';
 import 'package:moviesns/widget/my_profile.dart';
 
 class ReviewItem extends StatelessWidget {
@@ -11,7 +12,7 @@ class ReviewItem extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const FeedShow()),
+          MaterialPageRoute(builder: (context) => const FeedWrite()),
         );
       },
       child: Container(
