@@ -6,10 +6,10 @@ class MyProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 40,
-      height: 40,
+      width: 30,
+      height: 30,
       decoration: const BoxDecoration(
-        color: Colors.white38,
+        color: Color.fromARGB(255, 233, 137, 69),
         shape: BoxShape.circle,
       ),
     );

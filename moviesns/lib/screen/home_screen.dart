@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:moviesns/controller/movie_controller.dart';
 import 'package:moviesns/model/model_movie.dart';
 import 'package:moviesns/widget/box_slider.dart';
 import 'package:moviesns/widget/carousel_slider.dart';
 import 'package:moviesns/widget/circle_slider.dart';
 
 class HomeScreen extends StatefulWidget {
+  HomeScreen(BuildContext context);
+
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
   List<Movie> movies = [
     Movie.fromMap({
+      'id': 1,
       'title': '라라랜드',
       'keyword': '뮤지컬/로맨스',
       'poster': 'lalaland.png',
@@ -18,6 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
       'like': false
     }),
     Movie.fromMap({
+      'id': 2,
       'title': 'her',
       'keyword': '로맨스/SF',
       'poster': 'her.png',
@@ -25,6 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
       'like': false
     }),
     Movie.fromMap({
+      'id': 3,
       'title': '너의 췌장을 먹고싶어',
       'keyword': '로맨스/드라마',
       'poster': 'movie3.png',
@@ -32,6 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
       'like': false
     }),
     Movie.fromMap({
+      'id': 4,
       'title': '어바웃타임',
       'keyword': '멜로/로맨스',
       'poster': 'movie4.png',
@@ -40,6 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
       'like': false
     }),
     Movie.fromMap({
+      'id': 5,
       'title': '아바타',
       'keyword': '액션',
       'poster': 'movie5.png',
@@ -48,6 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
       'like': false
     }),
     Movie.fromMap({
+      'id': 6,
       'title': '극한직업',
       'keyword': '코미디',
       'poster': 'movie6.png',
@@ -56,6 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
       'like': false
     }),
     Movie.fromMap({
+      'id': 7,
       'title': '노트북',
       'keyword': '멜로/로맨스',
       'poster': 'movie7.png',
@@ -79,9 +89,6 @@ class _HomeScreenState extends State<HomeScreen> {
             TopBar(),
           ],
         ),
-        CircleSlider(
-          movies: movies,
-        ),
         BoxSlider(
           movies: movies,
         ),
@@ -101,7 +108,7 @@ class TopBar extends StatelessWidget {
           Image.asset(
             'images/logo4.png',
             fit: BoxFit.contain,
-            height: 30,
+            height: 35,
           ),
         ],
       ),

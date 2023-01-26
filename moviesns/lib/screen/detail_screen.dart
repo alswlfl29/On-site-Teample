@@ -59,14 +59,14 @@ class _DetailScreenState extends State<DetailScreen> {
                                   ),
                                 ),
                                 Container(
-                                  padding: EdgeInsets.all(7),
+                                  padding: EdgeInsets.all(10),
                                   child: Text(
                                     widget.movie.title,
                                     textAlign: TextAlign.center,
                                     style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16,
-                                    ),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                        color: Colors.amber),
                                   ),
                                 ),
                                 Container(

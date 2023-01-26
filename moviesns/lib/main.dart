@@ -1,54 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:moviesns/screen/home_screen.dart';
-import 'package:moviesns/widget/bottom_bar.dart';
+import 'package:get/route_manager.dart';
+import 'package:moviesns/screen/main_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final prefs = await SharedPreferences.getInstance();
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  MyAppState createState() => MyAppState();
-}
-
-class MyAppState extends State<MyApp> {
-  late TabController controller;
+class MyApp extends StatelessWidget {
+  MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'MoiveReview',
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColor: Colors.black,
-        accentColor: Colors.white,
-      ),
-      home: DefaultTabController(
-        length: 5,
-        child: Scaffold(
-          body: TabBarView(
-            physics: NeverScrollableScrollPhysics(),
-            children: <Widget>[
-              HomeScreen(),
-              Container(
-                child: Center(
-                  child: Text('검색'),
-                ),
-              ),
-              Container(
-                child: Center(
-                  child: Text('저장한콘텐츠'),
-                ),
-              ),
-              Container(
-                child: Center(
-                  child: Text('더보기'),
-                ),
-              ),
-            ],
-          ),
-          bottomNavigationBar: Bottom(),
-        ),
-      ),
+      home: MainScreen(),
     );
   }
 }

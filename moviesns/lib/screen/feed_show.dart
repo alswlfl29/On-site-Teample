@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moviesns/model/model_movie.dart';
 import 'package:moviesns/widget/my_profile.dart';
 
 class FeedShow extends StatelessWidget {

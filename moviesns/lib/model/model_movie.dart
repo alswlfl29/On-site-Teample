@@ -1,4 +1,5 @@
 class Movie {
+  final int id;
   final String title;
   final String keyword;
   final String poster;
@@ -6,7 +7,8 @@ class Movie {
   final bool like;
 
   Movie.fromMap(Map<String, dynamic> map)
-      : title = map['title'],
+      : id = map['id'],
+        title = map['title'],
         keyword = map['keyword'],
         poster = map['poster'],
         summary = map['summary'],

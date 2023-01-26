@@ -12,7 +12,7 @@ class ReviewItem extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const FeedWrite()),
+          MaterialPageRoute(builder: (context) => const FeedShow()),
         );
       },
       child: Container(

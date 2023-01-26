@@ -22,36 +22,36 @@ class Bottom extends StatelessWidget {
                 style: TextStyle(fontSize: 10),
               ),
             ),
-            Tab(
-              icon: Icon(
-                Icons.search,
-                size: 17,
-              ),
-              child: Text(
-                '검색',
-                style: TextStyle(fontSize: 10),
-              ),
-            ),
-            Tab(
-              icon: Icon(
-                Icons.account_circle,
-                size: 17,
-              ),
-              child: Text(
-                '마이페이지',
-                style: TextStyle(fontSize: 10),
-              ),
-            ),
-            Tab(
-              icon: Icon(
-                Icons.list,
-                size: 17,
-              ),
-              child: Text(
-                '더보기',
-                style: TextStyle(fontSize: 10),
-              ),
-            ),
+            // Tab(
+            //   icon: Icon(
+            //     Icons.search,
+            //     size: 17,
+            //   ),
+            //   child: Text(
+            //     '검색',
+            //     style: TextStyle(fontSize: 10),
+            //   ),
+            // ),
+            // Tab(
+            //   icon: Icon(
+            //     Icons.account_circle,
+            //     size: 17,
+            //   ),
+            //   child: Text(
+            //     '마이페이지',
+            //     style: TextStyle(fontSize: 10),
+            //   ),
+            // ),
+            // Tab(
+            //   icon: Icon(
+            //     Icons.list,
+            //     size: 17,
+            //   ),
+            //   child: Text(
+            //     '더보기',
+            //     style: TextStyle(fontSize: 10),
+            //   ),
+            // ),
           ],
         ),
       ),

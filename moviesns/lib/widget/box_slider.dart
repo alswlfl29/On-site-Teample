@@ -13,10 +13,13 @@ class BoxSlider extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text('지금 뜨는 콘텐츠'),
+          Text(
+            '  인기 영화',
+            style: TextStyle(fontSize: 18),
+          ),
           Container(
-            margin: EdgeInsets.fromLTRB(3, 10, 0, 3),
-            height: 120,
+            margin: EdgeInsets.fromLTRB(3, 20, 0, 20),
+            height: 200,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: makeBoxImages(context, movies),
